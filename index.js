@@ -5,12 +5,7 @@ require("./db/connect")
 const user = require('./db/users.js')
 const product = require('./db/products.js')
 app.use(express.json())
-app.use(cors({
-  origin:[process.env.port],
-  methods:['GET','POST','PUT','DELETE'],
-  credentials:true
-
-}))
+app.use(cors())
 
 // const getData=async()=>{
 //         const data = await user.find();
